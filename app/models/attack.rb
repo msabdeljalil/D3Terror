@@ -4,7 +4,7 @@ class Attack < ActiveRecord::Base
   CITY_COLUMN = 15
   DATE_COLUMN = 5
 
-  def self.import(file)
+  def self.import(file = 'Smaller_attackset.csv')
     attack_record = []
     CSV.foreach(file, headers: true) do |row|
       self.create(

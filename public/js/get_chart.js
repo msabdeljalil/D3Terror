@@ -1,9 +1,15 @@
 $(document).ready(function () {
   $('#get-chart').on("submit", function(event) {
-    var country = $('#country').serialize()
-    var city = $('#city').serialize()
+    var country = $('#country').val()
+    var city = $('#city').val()
     event.preventDefault();
-    query_for_attacks(country, city)
+    console.log(country, city)
+
+
+    $.post('/get-data', {country: country, city: city}, function(data) {
+      var city_attacks = data.attacks_in_city;
+      console.log(city_attacks)
+    }, 'json');
 
     // var dataset = [5, 10, 15, 20, 25];
     // d3.select("body").selectAll("#chart")
@@ -16,11 +22,7 @@ $(document).ready(function () {
     // }); // Function
   }); //Get Chart
 
-  $.post('/get-data', function(data){
-    data[0]
-  });
-
-
+// function query_for_attacks(country, city) // Query_for_attacks function
 
 
 }); // Document

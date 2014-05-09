@@ -5,10 +5,12 @@ get '/' do
   erb :index
 end
 
-get '/get-data' do
+post '/get-data' do
   @attacks_in_country = Attack.where("country = ?", params[:country])
   @attacks_in_city = Attack.where("city = ?", params[:city])
-  return [@attacks_in_country, @attacks_in_city]
+
+  content_type :json
+  return {attacks_in_country: @attacks_in_country, attacks_in_city: @attacks_in_city}.to_json
 end
 
 #----------- SESSIONS -----------
