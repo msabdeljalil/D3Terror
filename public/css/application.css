@@ -1,5 +1,5 @@
 .container {
-  margin: 20px auto;
+  margin: 28px auto;
   width: 800px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
@@ -24,7 +24,7 @@ nav {
 
 #dactyl {
   color: lightblue;
-} 
+}
 
 nav .brand, nav .brand a {
   margin-left: 25px;
@@ -99,4 +99,10 @@ form.quirks {
   padding: 3px;
   margin: 1px;
   color: white;
+}
+
+#input-fields {
+  position: fixed;
+  margin-left: 280px;
+  margin-top: 5px;
 }

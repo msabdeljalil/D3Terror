@@ -5,6 +5,11 @@ get '/' do
   erb :index
 end
 
+get '/get-chart' do
+  @attacks = Attack.where("city = ?", params[:city])
+  # @attacks.length
+end
+
 #----------- SESSIONS -----------
 
 get '/sessions/new' do

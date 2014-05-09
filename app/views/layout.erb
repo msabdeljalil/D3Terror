@@ -14,11 +14,13 @@
 
   <nav>
     <div class="brand"><a href="/">D3::TERROR<span id="dactyl">Dactyl</span></a></div>
-    <form id="get-chart">
-      <input type="text" placeholder="country">
-      <input type="text" placeholder="city">
-      <input type="submit" value="Get Chart">
-    </form>
+    <div id="input-fields">
+      <form id="get-chart">
+        <input type="text" placeholder="country">
+        <input type="text" placeholder="city">
+        <input type="submit" value="Get Chart">
+      </form>
+    </div>
     <ul>
       <% if current_user %>
         <li><a id="sign-out" href="/sessions/<%= current_user.id %>">Sign Out</a></li>
