@@ -3,7 +3,10 @@
   width: 800px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
-  background-color: #EEF0E1;
+  background-image:
+    linear-gradient(
+      #EEF0E1, #EEF1F2
+    );
 }
 
 .container h1 {
@@ -80,4 +83,20 @@ form.quirks {
   text-align: right;
   margin-right: 20px;
   width: 200px;
+}
+
+#chart {
+  display: inline-block;
+  width: 20px;
+  height: 75px;
+  background-color: teal;
+}
+
+.chart2 div {
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
 }

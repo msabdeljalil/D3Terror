@@ -1,8 +1,15 @@
 $(document).ready(function () {
-  // send an HTTP DELETE request for the sign-out link
-  $('#get-chart').submit(function(e) {
+  $('#get-chart').on("click", function(e) {
     e.preventDefault();
-    alert("show graph!");
+    var dataset = [5, 10, 15, 20, 25];
+    d3.select("body").selectAll("#chart")
+    .data(dataset)
+    .enter()
+    .append("div")
+    .attr("class", "bar");
+    .style("height", function(d) {
+    return d + "px";
+});
   });
 
 });

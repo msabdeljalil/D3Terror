@@ -4,6 +4,7 @@
   <link rel="stylesheet" href="/css/normalize.css?app=skills">
   <link rel="stylesheet" href="/css/application.css?app=skills">
   <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js?app=skills"></script>
   <script src="/js/get_chart.js"></script>
@@ -13,8 +14,9 @@
 
   <nav>
     <div class="brand"><a href="/">D3::TERROR<span id="dactyl">Dactyl</span></a></div>
-    <form id="get-chart" method="post" action="/">
+    <form id="get-chart">
       <input type="text" placeholder="country">
+      <input type="text" placeholder="city">
       <input type="submit" value="Get Chart">
     </form>
     <ul>
