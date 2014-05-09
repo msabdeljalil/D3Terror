@@ -95,8 +95,8 @@ form.quirks {
   width: 200px;
 }
 
-#chart {
-  display: inline-block;
+.chart {
+  display: none;
   width: 20px;
   height: 75px;
   background-color: teal;

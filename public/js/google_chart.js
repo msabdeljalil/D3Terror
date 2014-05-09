@@ -15,18 +15,16 @@
         data.addColumn('number', 'Attacks');
         data.addRows([
           ['Feyzabad', 27],
-          ['Feyzabad', 27],
-          ['Feyzabad', 27],
-          ['Feyzabad', 27],
-          ['Feyzabad', 27],
-          ['Feyzabad', 27],
-          ['Feyzabad', 27]
+          ['Kunduz', 79],
+          ['Maymana', 13],
+          ['Dasht-e Archi', 36],
+          ['Ghowrmach', 36]
         ]);
 
         // Set chart options
-        var options = {'title':'Top Attacks per City',
-                       'width':400,
-                       'height':300};
+        var options = {'title':'Top 5 Attack Cities',
+                       'width':500,
+                       'height':400};
 
         // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));

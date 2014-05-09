@@ -17,16 +17,17 @@
   <nav>
 
     <div class="brand"><a href="/">D3::TERROR<span id="dactyl">Dactyl</span></a></div>
+
     <div id="input-fields">
       <form id="get-chart">
-        <select name="country">
-        <% uniq_cities = Attack.order(:city).map(&:city).uniq %>
+        <select id='country' name="country">
+          <% uniq_cities = Attack.order(:city).map(&:city).uniq %>
           <option value="Afghanistan">Afghanistan</option>
-        </select>
-        <select name="city">
-        <% uniq_cities.each do |cit| %>
+          </select>
+        <select id='city' name="city">
+          <% uniq_cities.each do |cit| %>
           <option value="<%= cit %>"><%= cit %></option>
-        <% end %>
+          <% end %>
         </select>
         <input type="submit" value="Get Chart">
       </form>
@@ -40,6 +41,7 @@
         <li><a href="/users/new">Sign Up</a></li>
       <% end %>
     </ul>
+
   </nav>
 
   <%= yield %>

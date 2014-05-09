@@ -5,7 +5,7 @@ get '/' do
   erb :index
 end
 
-post '/get-data' do
+post '/get_data' do
   @attacks_in_country = Attack.where("country = ?", params[:country])
   @attacks_in_city = Attack.where("city = ?", params[:city])
 
