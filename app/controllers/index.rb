@@ -5,9 +5,12 @@ get '/' do
   erb :index
 end
 
-get '/get-chart' do
-  @attacks = Attack.where("city = ?", params[:city])
-  # @attacks.length
+post '/get-data' do
+  @attacks_in_country = Attack.where("country = ?", params[:country])
+  @attacks_in_city = Attack.where("city = ?", params[:city])
+
+  content_type :json
+  return {attacks_in_country: @attacks_in_country, attacks_in_city: @attacks_in_city}.to_json
 end
 
 #----------- SESSIONS -----------
