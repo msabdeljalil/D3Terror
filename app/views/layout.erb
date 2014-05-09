@@ -7,6 +7,8 @@
   <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js?app=skills"></script>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script src="/js/google_chart.js"></script>
   <script src="/js/get_chart.js"></script>
   <title></title>
 </head>
@@ -16,8 +18,15 @@
     <div class="brand"><a href="/">D3::TERROR<span id="dactyl">Dactyl</span></a></div>
     <div id="input-fields">
       <form id="get-chart">
-        <input type="text" placeholder="country">
-        <input type="text" placeholder="city">
+        <select name="country">
+        <% uniq_cities = Attack.order(:city).map(&:city).uniq %>
+          <option value="Afghanistan">Afghanistan</option>
+        </select>
+        <select name="city">
+        <% uniq_cities.each do |cit| %>
+          <option value="<%= cit %>"><%= cit %></option>
+        <% end %>
+        </select>
         <input type="submit" value="Get Chart">
       </form>
     </div>
